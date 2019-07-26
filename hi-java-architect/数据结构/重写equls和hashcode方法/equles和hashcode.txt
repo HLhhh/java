@@ -1,0 +1,10 @@
+重写equles后需要重写hashcode方法
+
+在java中规定
+equles相等的 hashcode也相等
+hashcode相等的 equles也相等
+
+所以如果重写了equles后，两个obj相等，但是没有重写hashcode
+，这两个对象的hash不相同会造成矛盾
+
+矛盾的体现在于hashmap中的k，根据hashcode来判断K
